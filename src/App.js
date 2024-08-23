@@ -4,12 +4,15 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ParentToChild from './components/ParentToChild';
 import ChildToParent from './components/ChildToParent';
 
+import ResponsiveAppBar from './components/ResponsiveAppBar';
+
 import AddPlayers from './components/AddPlayers';
 import PlayersList from './components/PlayersList';
 import Tournaments from './components/Tournaments';
 
 import './App.css';
 import logo from './logo.svg';
+
 
 // Pro-tip: you can use rafc (reactArrowFunctionComponent) to generate a functional component out of the box.
 
@@ -101,6 +104,7 @@ function App() {
         <Route path="/tournaments" element={<Tournaments />} />
         <Route path="/" element={
           <div className="App">
+            <ResponsiveAppBar />
             <header className="App-header">
               <AddPlayers onAdd={addPlayer} />
               <div>
