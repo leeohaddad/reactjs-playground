@@ -1,6 +1,17 @@
 .App {
   text-align: center;
+  /*text-align: left;*/
 }
+
+players {
+  border-color: black;
+}
+
+span {
+  font-size: .55em;
+}
+
+/* Auto Generated (below) */
 
 .App-logo {
   height: 40vmin;

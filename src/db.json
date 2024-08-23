@@ -1,0 +1,24 @@
+{
+  "playersList": [
+    {
+      "id": "1",
+      "name": "Haddad",
+      "team": "Brasa"
+    },
+    {
+      "id": "2",
+      "name": "Leo",
+      "team": "Goats"
+    },
+    {
+      "id": "3",
+      "name": "Adriano",
+      "team": "Goats"
+    },
+    {
+      "id": "c146",
+      "name": "Aidarous",
+      "team": "USA"
+    }
+  ]
+}
