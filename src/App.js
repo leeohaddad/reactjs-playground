@@ -151,8 +151,6 @@ function App() {
           </div>
         } />
       </Routes>
-
-
     </Router>
   );
 }
