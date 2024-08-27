@@ -2,7 +2,6 @@ import React from 'react';
 // import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import ResponsiveAppBarWithRouter from './components/ResponsiveAppBarWithRouter';
-import GoogleResponsiveAppBar from './components/Examples/GoogleResponsiveAppBar.js';
 
 import './App.css';
 
@@ -18,14 +17,11 @@ function App() {
     /* Comment outside the HTML part*/
     <div className="App">
       {/* Comment inside the HTML part*/}
-      
-      {/*<ResponsiveAppBarWithRouter />*/}
-      {/*<GoogleResponsiveAppBar />*/}
       <ResponsiveAppBarWithRouter />
 
       {/*<header className="App-header">
-        Leonardo Haddad
-        ReactJS Playground
+        <p>Leonardo Haddad</p>
+        <p>ReactJS Playground</p>
       </header>*/}
     </div>
 

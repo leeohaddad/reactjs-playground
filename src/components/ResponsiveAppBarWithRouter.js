@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 
 import AdbIcon from '@mui/icons-material/Adb';
 import MenuIcon from '@mui/icons-material/Menu';
@@ -10,7 +10,6 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Container from '@mui/material/Container';
 import IconButton from '@mui/material/IconButton';
-import Link from '@mui/material/Link';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import Toolbar from '@mui/material/Toolbar';
@@ -100,9 +99,8 @@ function ResponsiveAppBar() {
                 }}
               >
                 {pages.map((page) => (
-                  <MenuItem key={page} onClick={handleCloseNavMenu}>
-                    {/*<Link to={`/${page}`}>{page} Page (Menu)</Link>*/}
-                    <a href={'/' + page}>{page}</a>
+                  <MenuItem key={page} onClick={handleCloseNavMenu} component={Link} to={`/${page}`}>
+                    <Typography sx={{ textAlign: 'center' }}>{page}</Typography>
                   </MenuItem>
                 ))}
               </Menu>
@@ -134,9 +132,7 @@ function ResponsiveAppBar() {
                   sx={{ my: 2, color: 'white', display: 'block' }}
                   component={Link} to={`/${page}`}
                 >
-                  {/*<Link to={`/${page}`}>{page} Page (Top)</Link> (Out)*/}
                   {page}
-                  {/*<a href={'/' + page}>{page}</a>*/}
                 </Button>
               ))}
             </Box>
