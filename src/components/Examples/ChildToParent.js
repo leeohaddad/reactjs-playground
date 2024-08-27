@@ -14,4 +14,4 @@ const ChildToParent = ({ onMessageChange }) => {
     );
 }
 
-export default ChildToParent
+export default ChildToParent;

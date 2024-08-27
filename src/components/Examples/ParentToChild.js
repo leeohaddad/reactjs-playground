@@ -8,4 +8,4 @@ const ParentToChild = ({ message }) => {
     );
 }
 
-export default ParentToChild
+export default ParentToChild;

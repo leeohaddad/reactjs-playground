@@ -1,8 +1,6 @@
-import { useState } from 'react';
 import React from 'react';
 
 const PlayersList = ({playersList, onDelete}) => {
-
     return (
         <div>
             {playersList.map((player) => (
