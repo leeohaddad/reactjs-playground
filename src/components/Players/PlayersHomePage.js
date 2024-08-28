@@ -52,6 +52,7 @@ function PlayersPage() {
       },
       body: JSON.stringify({ name, team })
     });
+    await response.json();
   }
 
   const addPlayer = (name, team) => {

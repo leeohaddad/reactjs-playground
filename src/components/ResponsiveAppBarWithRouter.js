@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 import AdbIcon from '@mui/icons-material/Adb';
 import MenuIcon from '@mui/icons-material/Menu';
@@ -15,12 +15,6 @@ import MenuItem from '@mui/material/MenuItem';
 import Toolbar from '@mui/material/Toolbar';
 import Tooltip from '@mui/material/Tooltip';
 import Typography from '@mui/material/Typography';
-
-import HomePage from './HomePage';
-import PlayersHomePage from './Players/PlayersHomePage';
-import TournamentsHomePage from './Tournaments/TournamentsHomePage';
-import Counter from './Examples/Counter';
-import BasicDataFlow from './Examples/BasicDataFlow';
 
 // const pages = ['People', 'Teams', 'Organizations', 'Tournaments', 'Trainings'];
 const pages = [
@@ -162,8 +156,8 @@ function ResponsiveAppBar() {
                 onClose={handleCloseUserMenu}
               >
                 {settings.map((setting) => (
-                  <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                    <Typography textAlign="center"><Link to={`${setting}`}>{setting}</Link></Typography>
+                  <MenuItem key={setting} onClick={handleCloseUserMenu} component={Link} to={`/${setting}`}>>
+                    <Typography textAlign="center">{setting}</Typography>
                   </MenuItem>
                 ))}
               </Menu>
