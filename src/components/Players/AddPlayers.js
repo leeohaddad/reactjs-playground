@@ -27,15 +27,19 @@ const AddPlayers = ({onAdd}) => {
     return (
         <div>
             <form onSubmit={handleSubmit}>
-                <label>
-                    Name:
-                    <input type="text" value={name} onChange={(e) => setName(e.target.value)} />
-                </label>
-                <label>
-                    Team:
-                    <input type="text" value={team} onChange={(e) => setTeam(e.target.value)} />
-                </label>
-                <button type='submit'>Submit</button>
+                <div>
+                    <label>
+                        Name:
+                        <input type="text" value={name} onChange={(e) => setName(e.target.value)} />
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        Team:
+                        <input type="text" value={team} onChange={(e) => setTeam(e.target.value)} />
+                    </label>
+                </div>
+                <button type='submit'>Add Player</button>
             </form>
             {submittedData && (
                 <div>

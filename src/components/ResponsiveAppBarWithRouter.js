@@ -23,7 +23,10 @@ import Counter from './Examples/Counter';
 import BasicDataFlow from './Examples/BasicDataFlow';
 
 // const pages = ['People', 'Teams', 'Organizations', 'Tournaments', 'Trainings'];
-const pages = ['Home', 'Players', 'Tournaments', 'Examples/Counter', 'Examples/Basic-Data-Flow'];
+const pages = [
+  'Home', 'Players', 'Tournaments',
+  'Examples/Counter', 'Examples/Basic-Data-Flow', 'Examples/Context-Consumer'
+];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 function ResponsiveAppBar() {
@@ -46,7 +49,6 @@ function ResponsiveAppBar() {
   };
 
   return (
-    <Router>
       <AppBar position="static">
         <Container maxWidth="xl">
           <Toolbar disableGutters>
@@ -169,40 +171,6 @@ function ResponsiveAppBar() {
           </Toolbar>
         </Container>
       </AppBar>
-
-      <Routes>
-        <Route path='/' element={
-          <header className="App-header">
-            <HomePage />
-          </header>
-        } />
-        <Route path='/home' element={
-          <header className="App-header">
-            <HomePage />
-          </header>
-        } />
-        <Route path='/players' element={
-          <header className="App-header">
-            <PlayersHomePage />
-          </header>
-        } />
-        <Route path='/tournaments' element={
-          <header className="App-header">
-            <TournamentsHomePage />
-          </header>
-        } />
-        < Route path='/examples/counter' element={
-          < header className="App-header" >
-            <Counter />
-          </header >
-        } />
-        < Route path='/examples/basic-data-flow' element={
-          < header className="App-header" >
-            <BasicDataFlow />
-          </header >
-        } />
-      </Routes >
-    </Router >
   );
 }
 export default ResponsiveAppBar;
