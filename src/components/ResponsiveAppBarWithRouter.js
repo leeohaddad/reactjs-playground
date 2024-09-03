@@ -17,9 +17,12 @@ import Tooltip from '@mui/material/Tooltip';
 import Typography from '@mui/material/Typography';
 
 // const pages = ['People', 'Teams', 'Organizations', 'Tournaments', 'Trainings'];
-const pages = [
+const landscapeViewMenuPages = [
+  'Home', 'Players', 'Tournaments'
+];
+const portraitViewMenuPages = [
   'Home', 'Players', 'Tournaments',
-  'Examples/Counter', 'Examples/Basic-Data-Flow', 'Examples/Context-Consumer'
+  'Examples/Counter', 'Examples/Basic-Data-Flow', 'Examples/Context-Consumer', 'Examples/Login-With-Popup'
 ];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
@@ -51,7 +54,7 @@ function ResponsiveAppBar() {
               variant="h6"
               noWrap
               component="a"
-              href="#app-bar-with-responsive-menu"
+              href="/Home"
               sx={{
                 mr: 2,
                 display: { xs: 'none', md: 'flex' },
@@ -94,7 +97,7 @@ function ResponsiveAppBar() {
                   display: { xs: 'block', md: 'none' },
                 }}
               >
-                {pages.map((page) => (
+                {portraitViewMenuPages.map((page) => (
                   <MenuItem key={page} onClick={handleCloseNavMenu} component={Link} to={`/${page}`}>
                     <Typography sx={{ textAlign: 'center' }}>{page}</Typography>
                   </MenuItem>
@@ -106,7 +109,7 @@ function ResponsiveAppBar() {
               variant="h5"
               noWrap
               component="a"
-              href="#app-bar-with-responsive-menu"
+              href="/"
               sx={{
                 mr: 2,
                 display: { xs: 'flex', md: 'none' },
@@ -121,7 +124,7 @@ function ResponsiveAppBar() {
               UFD
             </Typography>
             <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-              {pages.map((page) => (
+              {landscapeViewMenuPages.map((page) => (
                 <Button
                   key={page}
                   onClick={handleCloseNavMenu}

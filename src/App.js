@@ -2,21 +2,18 @@
 import React, { createContext } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
+import ResponsiveAppBarWithRouter from './components/ResponsiveAppBarWithRouter';
+
 import HomePage from './components/HomePage';
 import PlayersHomePage from './components/Players/PlayersHomePage';
 import TournamentsHomePage from './components/Tournaments/TournamentsHomePage';
+
 import Counter from './components/Examples/Counter';
 import BasicDataFlow from './components/Examples/BasicDataFlow';
-
-import ResponsiveAppBarWithRouter from './components/ResponsiveAppBarWithRouter';
-
-/*
-import ContextConsumer from './components/Examples/ContextConsumer.js';
-import Context from 'Context'
-*/
+import MyContextConsumer from './components/Examples/MyContextConsumer';
+import LoginWithPopup from './components/Examples/LoginWithPopup';
 
 import './App.css';
-import MyContextConsumer from './components/Examples/MyContextConsumer';
 
 // Pro-tip: you can use rafc (reactArrowFunctionComponent) to generate a functional component out of the box.
 
@@ -60,6 +57,16 @@ function App() {
           <Route path='/examples/context-consumer' element={
             <header className="App-header" >
               <MyContextConsumer />
+            </header >
+          } />
+          <Route path='/examples/login' element={
+            <header className="App-header" >
+              <LoginWithPopup />
+            </header >
+          } />
+          <Route path='/examples/login-with-popup' element={
+            <header className="App-header" >
+              <LoginWithPopup />
             </header >
           } />
         </Routes>
