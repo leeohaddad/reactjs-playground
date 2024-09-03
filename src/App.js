@@ -16,26 +16,11 @@ import Context from 'Context'
 */
 
 import './App.css';
+import MyContextConsumer from './components/Examples/MyContextConsumer';
 
 // Pro-tip: you can use rafc (reactArrowFunctionComponent) to generate a functional component out of the box.
 
-export const Context = createContext();
-
 function App() {
-  /*
-  const textProvider = () => {
-    const [text, setText] = useState('Hello World');
-  }
-
-  const toggleText = () => {
-    if (text == 'Hello World') {
-      setText('Welcome to React');
-    } else {
-      setText('Hello World');
-    }
-  }
-  */
-
   return (
     <div className="App">
       <Router>
@@ -74,14 +59,7 @@ function App() {
           } />
           <Route path='/examples/context-consumer' element={
             <header className="App-header" >
-              Context Consumer
-              {/*
-              <Context.Provider value={{ text, setText }}>
-                <ContextConsumer />
-              </Context.Provider>
-
-              Text value: {text}
-              */}
+              <MyContextConsumer />
             </header >
           } />
         </Routes>
