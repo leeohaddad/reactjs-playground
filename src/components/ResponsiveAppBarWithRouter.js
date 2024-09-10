@@ -22,7 +22,8 @@ const landscapeViewMenuPages = [
 ];
 const portraitViewMenuPages = [
   'Home', 'Players', 'Tournaments',
-  'Examples/Counter', 'Examples/Basic-Data-Flow', 'Examples/Context-Consumer', 'Examples/Login-With-Popup'
+  'Examples/Counter', 'Examples/Basic-Data-Flow', 'Examples/Context-Consumer',
+  'Firebase/Login'
 ];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 

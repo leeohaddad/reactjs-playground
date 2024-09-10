@@ -1,5 +1,5 @@
 
-import React, { createContext } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import ResponsiveAppBarWithRouter from './components/ResponsiveAppBarWithRouter';
@@ -11,9 +11,9 @@ import TournamentsHomePage from './components/Tournaments/TournamentsHomePage';
 import Counter from './components/Examples/Counter';
 import BasicDataFlow from './components/Examples/BasicDataFlow';
 import MyContextConsumer from './components/Examples/MyContextConsumer';
-import LoginWithPopup from './components/Examples/LoginWithPopup';
 
 import './App.css';
+import AuthenticationPage from './components/Firebase/Authentication/AuthenticationHomePage';
 
 // Pro-tip: you can use rafc (reactArrowFunctionComponent) to generate a functional component out of the box.
 
@@ -28,6 +28,11 @@ function App() {
             <header className="App-header">
               <HomePage />
             </header>
+          } />
+          <Route path='/login' element={
+            <header className="App-header" >
+              <AuthenticationPage />
+            </header >
           } />
           <Route path='/home' element={
             <header className="App-header">
@@ -59,14 +64,9 @@ function App() {
               <MyContextConsumer />
             </header >
           } />
-          <Route path='/examples/login' element={
+          <Route path='/firebase/login' element={
             <header className="App-header" >
-              <LoginWithPopup />
-            </header >
-          } />
-          <Route path='/examples/login-with-popup' element={
-            <header className="App-header" >
-              <LoginWithPopup />
+              <AuthenticationPage />
             </header >
           } />
         </Routes>
